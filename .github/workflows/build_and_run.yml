@@ -31,7 +31,7 @@ jobs:
           zip -r pyspark-app.zip src/
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: pyspark-app
           path: pyspark-app.zip
@@ -41,7 +41,7 @@ jobs:
     needs: build
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v2
         with:
           name: pyspark-app
           path: .
